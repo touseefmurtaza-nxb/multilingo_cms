@@ -2,7 +2,7 @@ class Content
   include Mongoid::Document
   include Mongoid::Attributes::Dynamic
 
-  # Fields
+  #Fields
   field :language, type: String, default: "english"
   field :body, type: String, default: ""
 
