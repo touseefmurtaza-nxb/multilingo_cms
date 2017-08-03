@@ -1,0 +1,14 @@
+<%#= simple_form_for @content, as: :post, :url => post_contents_path do |f| %>
+<%= simple_form_for [@post,@content] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :language %>
+    <%= f.input :body %>
+    <%= f.association :post, :as => :hidden, :input_html => { :value => @post.id } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

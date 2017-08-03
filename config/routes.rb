@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     unlocks: 'users/unlocks'
   }
-  resources :posts
+  resources :posts do |post|
+    resources :contents
+  end
 end
-

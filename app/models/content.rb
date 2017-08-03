@@ -1,11 +1,10 @@
 class Content
   include Mongoid::Document
-  include Mongoid::Attributes::Dynamic
 
-  #Fields
-  field :language, type: String, default: "english"
-  field :body, type: String, default: ""
+  ## Fields
+  field :language, type: String
+  field :body, type: String
 
-  #Associations
+  ## Associations
   belongs_to :post
 end
