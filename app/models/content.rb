@@ -7,4 +7,6 @@ class Content
 
   ## Associations
   belongs_to :post
+
+  LANGUAGE = {'English'=>'en','Denmark'=>'de'}
 end
